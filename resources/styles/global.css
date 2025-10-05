@@ -47,3 +47,7 @@ footer {
   z-index: -1;
   background: radial-gradient(circle at top left, #0b0f14, #05070a);
 }
+
+.text-electricBlue { 
+    color: var(--electricBlue); 
+}
