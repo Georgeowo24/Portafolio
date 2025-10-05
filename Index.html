@@ -13,25 +13,38 @@
     <div id="particles-js"></div>
 
     <nav id="navbar">
-        <div style="display:flex;align-items:center;gap:1.5rem;">
-            <div style="width:2.5rem;height:2.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(to top right,#0ea5ff33,#2dd4bf1a);border:1px solid rgba(255,255,255,0.05);">TR</div>
-            <span>Jorge Torres Romero</span>
+        <div class="nav-logo">
+            <div class="logo-circle">TR</div>
+            <span>Jorge TR</span>
         </div>
 
-        <ul>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#experience">Experiencia</a></li>
-            <li><a href="#contact">Contactos</a></li>
-        </ul>
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <svg id="icon-open" width="30" height="30" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="icon-close" width="30" height="30" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6L18 18M6 18L18 6" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
 
-        <ul>
-            <li>
-                <a href="https://github.com/Georgeowo24" target="_blank" aria-label="GitHub"><img src="./resources/icons/github.svg" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/jorge-torres-romero/" target="_blank" aria-label="LinkedIn"><img src="./resources/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a href="mailto:jtorresromero30@gmail.com" target="_blank" aria-label="Mail"><img src="./resources/icons/mail.svg" alt="Mail" style="height: 30px;"></a>
-            </li>
-        </ul>
+        <div id="mobile-menu" class="mobile-menu-closed">
+            <ul class="main-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#contact">Contactos</a></li>
+            </ul>
+
+            <ul class="social-links">
+                <li>
+                    <a href="https://github.com/Georgeowo24" target="_blank"><img src="./resources/icons/github.svg" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/jorge-torres-romero/" target="_blank"><img src="./resources/icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="mailto:jtorresromero30@gmail.com" target="_blank"><img src="./resources/icons/mail.svg" alt="Mail"></a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+
     
     <main class="hero">
         <div>
@@ -65,16 +78,12 @@
     </footer>
 
 
-    <!-- blur glass navbar -->
     <script src="./resources/scripts/navbar.js"></script>
 
-    <!-- Animation Typed -->
     <script src="./resources/scripts/typed.js"></script>
 
-    <!-- Animation Span -->
     <script src="./resources/scripts/spans.js"></script>
     
-    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="./resources/scripts/particles.js"></script>
 
