@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+
+    <link rel="stylesheet" href="./resources/styles/global.css">
+    <link rel="stylesheet" href="./resources/styles/navbar.css">
+    <link rel="stylesheet" href="./resources/styles/index.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav id="navbar">
+        <div style="display:flex;align-items:center;gap:1.5rem;">
+            <div style="width:2.5rem;height:2.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(to top right,#0ea5ff33,#2dd4bf1a);border:1px solid rgba(255,255,255,0.05);">TR</div>
+            <span>Jorge Torres Romero</span>
+        </div>
+
+        <ul>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#contact">Contactos</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://github.com/Georgeowo24" target="_blank" aria-label="GitHub"><img src="./resources/icons/github.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/jorge-torres-romero/" target="_blank" aria-label="LinkedIn"><img src="./resources/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="mailto:jtorresromero30@gmail.com" target="_blank" aria-label="Mail"><img src="./resources/icons/mail.svg" alt="Mail" style="height: 30px;"></a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="hero">
+        <div>
+            <p class="typed" id="typed"></p>
+            <h2>Hola, soy </h2>
+            <h1 style="font-size: 40px;"><span class="text-electricBlue">Jorge Torres Romero</span></h1>
+            
+            <div style="margin-top:1.5rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+                <span style="opacity:0.8;">Tecnologías:</span>
+                <div class="tech-list">
+                    <span>React</span><span>PHP</span><span>JavaScript</span><span>C#</span><span>CSS</span><span>Tailwind</span><span>SQL</span><span>MongoDB</span>
+                </div>
+            </div>
+            <div style="margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                <a href="#" class="btn btn-blue" target="_blank">Descargar CV</a>
+            </div>
+
+        </div>
+
+        <div style="display:flex;justify-content:center;">
+            <div style="width:14rem;padding:1rem;border-radius:1rem;background:linear-gradient(to bottom,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);">
+                <div style="aspect-ratio:4/5;border-radius:0.75rem;background:linear-gradient(to bottom right,rgba(14,165,255,0.06),rgba(59,130,246,0.02));display:flex;align-items:center;justify-content:center;">
+                    <img src="./resources/images/FotoJTR.png" alt="Foto Jorge Torres Romero" height="230px" style="border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 - Jorge Torres Romero
+    </footer>
+
+
+    <!-- blur glass navbar -->
+    <script src="./resources/scripts/navbar.js"></script>
+
+    <!-- Animation Typed -->
+    <script src="./resources/scripts/typed.js"></script>
+
+    <!-- Animation Span -->
+    <script src="./resources/scripts/spans.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./resources/scripts/particles.js"></script>
+
+</body>
+</html>
