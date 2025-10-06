@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimientos</title>
+
+    <link rel="icon" href="../resources/icons/code.ico">
+
+    <link rel="stylesheet" href="../resources/styles/global.css">
+    <link rel="stylesheet" href="../resources/styles/navbar.css">
+    <link rel="stylesheet" href="../resources/styles/recognition.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav id="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><div class="logo-circle">TR</div></a>
+            <a href="../index.html"><span>Jorge TR</span></a>
+        </div>
+
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <svg id="icon-open" width="30" height="30" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="icon-close" width="30" height="30" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6L18 18M6 18L18 6" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div id="mobile-menu" class="mobile-menu-closed">
+            <ul class="main-links">
+                <li><a href="./about.html">Sobre mí</a></li>
+                <li><a href="./recognition.html">Reconocimientos</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+            </ul>
+
+            <ul class="social-links">
+                <li>
+                    <a href="https://github.com/Georgeowo24" target="_blank"><img src="../resources/icons/github.svg" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/jorge-torres-romero/" target="_blank"><img src="../resources/icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="mailto:jtorresromero30@gmail.com" target="_blank"><img src="../resources/icons/mail.svg" alt="Mail"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="recognitions-section">
+        <h1>Mis Reconocimientos</h1>
+
+        <p class="recognitions-intro">
+            Aquí puedes ver algunos de los certificados y reconocimientos que he obtenido a lo largo de mi trayectoria.
+        </p>
+
+        <div class="recognitions-grid">
+            <div class="recognition-card">
+                <img src="../resources/images/DELF-A2.webp" alt="DELF-A2">
+            </div>
+
+            <div class="recognition-card">
+                <img src="../resources/images/Git-Laravel.webp" alt="Git-Laravel">
+            </div>
+
+            <div class="recognition-card">
+                <img src="../resources/images/Hackathon ETH CINCO DE MAYO 2024.webp" alt="Hackathon">
+            </div>
+
+            <div class="recognition-card">
+                <img src="../resources/images/IA en el trabajo-Microsoft.webp" alt="Ia en el trabajo">
+            </div>
+
+            <div class="recognition-card">
+                <img src="../resources/images/MACVNR.webp" alt="MACVNR">
+            </div>
+
+            <div class="recognition-card">
+                <img src="../resources/images/Titulo TSU.webp" alt="">
+            </div>
+        </div>
+    </main>
+
+    <div id="preview-modal" class="preview-modal">
+        <span class="close-btn">&times;</span>
+        <img class="preview-img" src="" alt="Vista previa de reconocimiento">
+    </div>
+
+    <footer>
+        © 2025 - Jorge Torres Romero
+    </footer>
+
+    <script src="../resources/scripts/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../resources/scripts/particles.js"></script>
+    <script src="../resources/scripts/recognition.js"></script>
+</body>
+</html>
