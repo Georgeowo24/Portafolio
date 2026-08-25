@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+# Se ejecuta cada vez que haces push a la rama main
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+    # 1. Descarga tu código
+    - uses: actions/checkout@v3
+
+    # 2. Instala .NET 8 (ajusta el número si usaste .NET 7)
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    # 3. Compila el proyecto en modo Release
+    - name: Publish .NET Project
+      run: dotnet publish Portfolio.csproj -c Release -o release --nologo
+
+    # 4. Sube la carpeta wwwroot compilada a una rama llamada gh-pages
+    - name: Commit wwwroot to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: release/wwwroot
+        branch: gh-pages
