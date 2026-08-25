@@ -1,0 +1,62 @@
+@page "/recognition"
+
+<main class="recognitions-section">
+    <h1>Mis Reconocimientos</h1>
+
+    <p class="recognitions-intro">
+        Aquí puedes ver algunos de los certificados y reconocimientos que he obtenido a lo largo de mi trayectoria.
+    </p>
+
+    <div class="recognitions-grid">
+        <div class="recognition-card" @onclick='() => AbrirModal("resources/images/DELF-A2.webp")'>
+            <img src="resources/images/DELF-A2.webp" alt="DELF-A2">
+        </div>
+
+        <div class="recognition-card" @onclick='() => AbrirModal("resources/images/Git-Laravel.webp")'>
+            <img src="resources/images/Git-Laravel.webp" alt="Git-Laravel">
+        </div>
+
+        <div class="recognition-card" @onclick='() => AbrirModal("resources/images/Hackathon ETH CINCO DE MAYO 2024.webp")'>
+            <img src="resources/images/Hackathon ETH CINCO DE MAYO 2024.webp" alt="Hackathon">
+        </div>
+
+        <div class="recognition-card" @onclick='() => AbrirModal("resources/images/IA en el trabajo-Microsoft.webp")'>
+            <img src="resources/images/IA en el trabajo-Microsoft.webp" alt="Ia en el trabajo">
+        </div>
+
+        <div class="recognition-card" @onclick='() => AbrirModal("resources/images/MACVNR.webp")'>
+            <img src="resources/images/MACVNR.webp" alt="MACVNR">
+        </div>
+
+        <div class="recognition-card" @onclick='() => AbrirModal("resources/images/ConstanciaMEXAPR.webp")'>
+            <img src="resources/images/ConstanciaMEXAPR.webp" alt="Constancia MEXAPR">
+        </div>
+    </div>
+</main>
+
+@if (mostrarModal)
+{
+    <!-- El modal nativo en Blazor -->
+    <div id="preview-modal" class="preview-modal" style="display: flex;" @onclick="CerrarModal">
+        <span class="close-btn" @onclick="CerrarModal">&times;</span>
+        <!-- Evitamos que hacer clic en la imagen cierre el modal -->
+        <img class="preview-img" src="@imagenActual" alt="Vista previa de reconocimiento" @onclick:stopPropagation="true">
+    </div>
+}
+
+@code {
+    private bool mostrarModal = false;
+    private string imagenActual = "";
+
+    private void AbrirModal(string rutaImagen)
+    {
+        imagenActual = rutaImagen;
+        mostrarModal = true;
+    }
+
+    private void CerrarModal()
+    {
+        mostrarModal = false;
+        imagenActual = "";
+    }
+}

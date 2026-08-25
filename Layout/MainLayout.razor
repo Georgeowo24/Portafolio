@@ -1,0 +1,64 @@
+﻿@inherits LayoutComponentBase
+
+<nav id="navbar">
+    <div class="nav-logo">
+        <NavLink href="" Match="NavLinkMatch.All">
+            <div class="logo-circle">TR</div>
+        </NavLink>
+        <NavLink href="" Match="NavLinkMatch.All">
+            <span>Jorge TR</span>
+        </NavLink>
+    </div>
+
+    <button id="menu-toggle" aria-label="Abrir menú" @onclick="ToggleMenu">
+        @if (!isMenuOpen)
+        {
+            <svg id="icon-open" width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        }
+        else
+        {
+            <svg id="icon-close" width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <path d="M6 6L18 18M6 18L18 6" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        }
+    </button>
+
+    <div id="mobile-menu" class="@(isMenuOpen ? "mobile-menu-open" : "mobile-menu-closed")">
+        <ul class="main-links">
+            <li><NavLink href="about" @onclick="CloseMenu">Sobre mí</NavLink></li>
+            <li><NavLink href="recognition" @onclick="CloseMenu">Reconocimientos</NavLink></li>
+            <li><NavLink href="contact" @onclick="CloseMenu">Contacto</NavLink></li>
+        </ul>
+
+        <ul class="social-links">
+            <li>
+                <a href="https://github.com/Georgeowo24" target="_blank"><img src="resources/icons/github.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/jorge-torres-romero/" target="_blank"><img src="resources/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="mailto:jtorresromero30@gmail.com" target="_blank"><img src="resources/icons/mail.svg" alt="Mail"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+@Body
+
+<footer>
+    © 2026 - Jorge Torres Romero
+</footer>
+
+@code {
+    private bool isMenuOpen = false;
+
+    private void ToggleMenu()
+    {
+        isMenuOpen = !isMenuOpen;
+    }
+
+    private void CloseMenu()
+    {
+        // Cierra el menú al hacer clic en un enlace
+        isMenuOpen = false;
+    }
+}

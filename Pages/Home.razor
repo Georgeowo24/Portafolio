@@ -1,0 +1,38 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<main class="hero">
+    <div>
+        <p class="typed" id="typed"></p>
+        <h2>Hola, soy </h2>
+        <h1 style="font-size: 40px;"><span class="text-electricBlue">Jorge Torres Romero</span></h1>
+        
+        <div style="margin-top:1.5rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+            <span style="opacity:0.8;">Tecnologías:</span>
+            <div class="tech-list">
+                <span>React</span><span>PHP</span><span>JavaScript</span><span>C#</span><span>Python</span><span>CSS</span><span>Tailwind</span><span>SQL</span><span>MongoDB</span><span>SAP Data Services</span><span>SAP DataSphere</span>
+            </div>
+        </div>
+        <div style="margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="resources/CV - Jorge Torres Romero.pdf" class="btn btn-blue" target="_blank">Descargar CV</a>
+        </div>
+    </div>
+
+    <div style="display:flex; justify-content:center;">
+        <div style="width:22rem; padding:1rem; border-radius:1rem;">
+            <div style="aspect-ratio:1/1; border-radius:50%; background:linear-gradient(to bottom right, rgba(14,165,255,0.06), rgba(59,130,246,0.02)); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; box-shadow: 0 5px 80px -2px rgba(245, 246, 247, 0.4), 0 0 15px rgba(14, 165, 255, 0.2);">
+                <img src="resources/images/FotoJorge.webp" alt="Foto Jorge Torres Romero" style="width:100%; height:100%; object-fit:cover; transform">
+            </div>
+        </div>
+    </div>
+</main>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("inicializarScriptsInicio");
+        }
+    }
+}
